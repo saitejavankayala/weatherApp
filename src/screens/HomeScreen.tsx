@@ -89,7 +89,7 @@ const HomeScreen = () => {
                     onChangeText={setCity}
                 />
                 <Button title="Get Weather" onPress={handleSearch} />
-                {loading && <ActivityIndicator size="large" />}
+               {loading && <ActivityIndicator size="large" testID="ActivityIndicator" />}
                 {error && <Text style={styles.error}>{error}</Text>}
 
                 {current && (
