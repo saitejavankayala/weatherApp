@@ -7,7 +7,7 @@ A modern weather forecasting application built using **React Native**, allowing 
 
 ## 📽️ Demo
 
-![Weather App Demo](./src/assets/weatherApp.gif)
+![Weather App Demo](https://raw.githubusercontent.com/saitejavankayala/weatherApp/main/src/assets/weatherApp.gif)
 
 ---
 
