@@ -91,6 +91,8 @@ cd android
 android/app/build/outputs/apk/release/app-release.apk
 ```
 
+📥 **[Click here to download the APK](https://github.com/saitejavankayala/weatherApp/blob/main/release/download/app-release.apk)**
+
 ---
 
 ## 📄 Design Decisions
