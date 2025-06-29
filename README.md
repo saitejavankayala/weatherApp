@@ -1,97 +1,122 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# 🌦️ Weather App (React Native)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+A modern weather forecasting application built using **React Native**, allowing users to search for cities and view current weather along with a 5-day forecast. Includes unit toggling (Celsius/Fahrenheit), offline support, and error handling.
 
-## Step 1: Start Metro
+---
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 📽️ Demo
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+![Weather App Demo](./src/assets/weatherApp.gif)
 
-```sh
-# Using npm
-npm start
+---
 
-# OR using Yarn
-yarn start
+## 📱 Features
+
+- 🔍 **Search City**: Enter any city name to fetch real-time weather data.
+- 🌤 **Current Weather**: View temperature, condition, humidity, and wind speed.
+- 📅 **5-Day Forecast**: Shows weather details for the upcoming days.
+- 🌡️ **Celsius/Fahrenheit Toggle**: Switch between metric and imperial units.
+- ⚙️ **Settings Screen**: Manage unit preferences.
+- 📶 **Graceful API Error Handling**: For invalid cities or network issues.
+---
+
+## 🔧 Folder Structure
+
+```
+src/
+├── api/               # Weather API logic
+│   └── weather.ts
+├── assets/
+│   └── images/        # Weather icons and app demo GIF
+├── features/
+│   ├── settings/      # Redux slice for settings
+│   └── weather/       # Redux slice for weather data
+├── navigation/        # App navigation
+├── screens/           # Home and settings screens
+├── store/             # Redux store config
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🛠️ Tech Stack
 
-### Android
+- React Native 0.7x+
+- TypeScript
+- Redux Toolkit
+- React Navigation
+- OpenWeatherMap API
+- AsyncStorage (Bonus)
+- Expo Location (Bonus)
+- Jest & React Native Testing Library
 
-```sh
-# Using npm
-npm run android
+---
 
-# OR using Yarn
-yarn android
+## 🧪 Testing
+
+- Unit tests using **Jest**
+- Component testing with **@testing-library/react-native**
+
+```bash
+npm test
 ```
 
-### iOS
+---
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## 🏗️ Installation
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+```bash
+# Clone the repository
+git clone https://github.com/saitejavankayala/WeatherApp_Assignment.git
+cd WeatherApp_Assignment
 
-```sh
-bundle install
+# Install dependencies
+npm install
+
+# Run the app
+npx react-native run-android   # For Android
+npx react-native run-ios       # For iOS (macOS only)
 ```
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
+## 📦 APK Build (Mandatory)
+
+```bash
+# Generate release APK
+cd android
+./gradlew assembleRelease
+
+# APK will be in:
+android/app/build/outputs/apk/release/app-release.apk
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+---
 
-```sh
-# Using npm
-npm run ios
+## 📄 Design Decisions
 
-# OR using Yarn
-yarn ios
-```
+- Used **Redux Toolkit** for scalable state management.
+- Error boundaries and loading states ensure smooth UX.
+- Modular folder structure with clear separation of concerns.
+- Weather icons enhance visual context based on conditions.
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## ✅ Deliverables
 
-## Step 3: Modify your app
+- ✅ Clean and responsive UI
+- ✅ Working functionality for all major features
+- ✅ APK file included
+- ✅ Bonus: Option to add location detection and offline caching
 
-Now that you have successfully run the app, let's make changes!
+---
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 🔗 API Reference
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+- [OpenWeatherMap API](https://openweathermap.org/api)
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
+## 🙌 Credits
 
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Made with ❤️ by [@saitejavankayala](https://github.com/saitejavankayala)
